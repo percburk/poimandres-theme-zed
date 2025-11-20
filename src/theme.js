@@ -31,7 +31,10 @@ export const base = {
   },
 }
 
-export const noitalics = { ...base, styles: { ...base.styles, fontStyle: 'normal' } }
+export const noitalics = {
+  ...base,
+  styles: { ...base.styles, fontStyle: 'normal' },
+}
 
 export const storm = {
   ...base,
@@ -398,8 +401,8 @@ function createTheme({ colors, styles }, themeName) {
   `
 }
 
-export function createSchema(...themes) {
-  const themeTemplates = themes
+export function createSchema(...themeArgs) {
+  const themes = themeArgs
     .map(({ theme, themeName }) => createTheme(theme, themeName))
     .join(',')
 
@@ -408,7 +411,7 @@ export function createSchema(...themes) {
       "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
       "name": "poimandres-zed",
       "author": "percburk",
-      "themes": [${themeTemplates}]
+      "themes": [${themes}]
     }
   `
 }

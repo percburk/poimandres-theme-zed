@@ -11,7 +11,7 @@ async function generateTheme() {
     await import(`./theme.js?v=${reloadCount}`)
   reloadCount++
 
-  fs.writeFile(
+  fs.writeFileSync(
     'themes/poimandres-zed.json',
     createSchema(
       {
