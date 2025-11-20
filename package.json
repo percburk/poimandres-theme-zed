@@ -6,7 +6,8 @@
   "main": "src/watch.js",
   "scripts": {
     "format": "prettier --write --ignore-unknown .",
-    "watch": "node src/watch.js"
+    "watch": "node src/watch.js",
+    "watch:sync": "node src/watch.js --sync"
   },
   "repository": {
     "type": "git",
