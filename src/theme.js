@@ -92,19 +92,19 @@ function createTheme({ colors, styles }, themeName) {
         "elevated_surface.background": "${colors.bg}",
         "surface.background": "${colors.bg}",
         "background": "${colors.bg}",
-        "element.background": "#404350",
-        "element.hover": "#40435080",
+        "element.background": "${colors.focus}",
+        "element.hover": "${colors.focus}80",
         "element.active": null,
-        "element.selected": "#40435080",
+        "element.selected": "${colors.focus}80",
         "element.disabled": null,
-        "drop_target.background": "#607487",
+        "drop_target.background": "${colors.bluishGrayBrighter}80",
         "ghost_element.background": null,
-        "ghost_element.hover": "#40435080",
+        "ghost_element.hover": "${colors.focus}80",
         "ghost_element.active": null,
-        "ghost_element.selected": "#40435080",
+        "ghost_element.selected": "${colors.focus}80",
         "ghost_element.disabled": null,
         "text": "${colors.gray}",
-        "text.muted": "#868cad",
+        "text.muted": "${colors.darkerGray}",
         "text.placeholder": null,
         "text.disabled": null,
         "text.accent": null,
@@ -118,14 +118,14 @@ function createTheme({ colors, styles }, themeName) {
         "toolbar.background": "${colors.black}00",
         "tab_bar.background": "${colors.bg}",
         "tab.inactive_background": "${colors.bg}",
-        "tab.active_background": "#40435080",
+        "tab.active_background": "${colors.focus}80",
         "search.match_background": null,
         "panel.background": "${colors.bg}",
         "panel.focused_border": null,
         "pane.focused_border": null,
-        "scrollbar.thumb.background": "#10101080",
+        "scrollbar.thumb.background": "${colors.black}80",
         "scrollbar.thumb.hover_background": "${colors.gray}25",
-        "scrollbar.thumb.border": "#10101080",
+        "scrollbar.thumb.border": "${colors.black}80",
         "scrollbar.track.background": "${colors.bg}",
         "scrollbar.track.border": "${colors.black}00",
         "editor.foreground": "${colors.gray}",
@@ -133,12 +133,12 @@ function createTheme({ colors, styles }, themeName) {
         "editor.gutter.background": "${colors.bg}",
         "editor.subheader.background": null,
         "editor.active_line.background": "#282b3a",
-        "editor.highlighted_line.background": null,
-        "editor.line_number": "#868cad50",
-        "editor.active_line_number": "${colors.gray}",
+        "editor.highlighted_line.background": "${colors.selection}",
+        "editor.line_number": "${colors.darkerGray}50",
+        "editor.active_line_number": "#969cbd",
         "editor.invisible": null,
-        "editor.wrap_guide": "#10101030",
-        "editor.active_wrap_guide": "#10101030",
+        "editor.wrap_guide": "${colors.black}30",
+        "editor.active_wrap_guide": "${colors.black}30",
         "editor.document_highlight.read_background": null,
         "editor.document_highlight.write_background": null,
         "terminal.background": "${colors.bg}",
@@ -225,12 +225,12 @@ function createTheme({ colors, styles }, themeName) {
             "font_weight": null
           },
           "comment": {
-            "color": "#868cadB0",
+            "color": "${colors.darkerGray}B0",
             "font_style": "${styles.fontStyle}",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "#868cadB0",
+            "color": "${colors.darkerGray}",
             "font_style": "${styles.fontStyle}",
             "font_weight": null
           },
@@ -255,7 +255,7 @@ function createTheme({ colors, styles }, themeName) {
             "font_weight": 700
           },
           "keyword": {
-            "color": "${colors.lightBlue}",
+            "color": "${colors.desaturatedBlue}",
             "font_style": null,
             "font_weight": null
           },
@@ -350,7 +350,7 @@ function createTheme({ colors, styles }, themeName) {
             "font_weight": null
           },
           "type": {
-            "color": "${colors.gray}C0",
+            "color": "${colors.lightBlue}",
             "font_style": null,
             "font_weight": null
           },
@@ -360,22 +360,22 @@ function createTheme({ colors, styles }, themeName) {
             "font_weight": null
           },
           "variable.special": {
-            "color": "${colors.lightBlue}",
+            "color": "${colors.offWhite}",
             "font_style": "${styles.fontStyle}",
             "font_weight": null
           },
           "function": {
-            "color": "${colors.lightBlue}",
+            "color": "${colors.offWhite}d0",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "${colors.lightBlue}",
+            "color": "${colors.offWhite}d0",
             "font_style": null,
             "font_weight": null
           },
           "function.special.definition": {
-            "color": "${colors.lightBlue}",
+            "color": "${colors.offWhite}d0",
             "font_style": null,
             "font_weight": null
           },
