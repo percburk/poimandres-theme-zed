@@ -9,24 +9,25 @@ async function generateTheme() {
   const { base, noitalics, storm, stormNoitalics, createSchema, createSvg } =
     await import(`./theme.js?v=${reloadCount}`)
   reloadCount++
+
   fs.writeFile(
-    'themes/poimandres-color-theme.json',
-    createSchema(base, 'poimandres'),
+    'themes/poimandres-zed.json',
+    createSchema(base, 'poimandres-zed'),
     (err) => err && console.log(err)
   )
   fs.writeFile(
-    'themes/poimandres-color-theme-storm.json',
-    createSchema(storm, 'poimandres-storm'),
+    'themes/poimandres-theme-zed-storm.json',
+    createSchema(storm, 'poimandres-zed-storm'),
     (err) => err && console.log(err)
   )
   fs.writeFile(
-    'themes/poimandres-color-theme-noitalics.json',
-    createSchema(noitalics, 'poimandres-noitalics'),
+    'themes/poimandres-theme-zed-noitalics.json',
+    createSchema(noitalics, 'poimandres-zed-noitalics'),
     (err) => err && console.log(err)
   )
   fs.writeFile(
-    'themes/poimandres-color-theme-noitalics-storm.json',
-    createSchema(stormNoitalics, 'poimandres-noitalics-storm'),
+    'themes/poimandres-theme-zed-noitalics-storm.json',
+    createSchema(stormNoitalics, 'poimandres-zed-noitalics-storm'),
     (err) => err && console.log(err)
   )
 
@@ -37,7 +38,7 @@ async function generateTheme() {
     .toFile('assets/dots.png')
     .catch((err) => console.log(err))
 
-  console.log(`${ARROW} Assets generated`)
+  console.log(`${ARROW} assets generated`)
 }
 
 const watcher = chokidar.watch('./src/theme.js')

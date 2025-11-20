@@ -49,7 +49,7 @@ export const storm = {
 export const stormNoitalics = {
   ...base,
   colors: { ...storm.colors },
-  styles: { ...base.styles, fontStyle: '' },
+  styles: { ...base.styles, fontStyle: 'normal' },
 }
 
 export function createSvg({ colors }) {
@@ -78,7 +78,7 @@ export function createSchema({ colors, styles }, themeName) {
   return `
     {
       "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
-      "name": "poimandres",
+      "name": "poimandres-zed",
       "author": "percburk",
       "themes": [
         {
