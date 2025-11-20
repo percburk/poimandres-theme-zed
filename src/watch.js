@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import sharp from 'sharp'
 import chokidar from 'chokidar'
+import prettier from 'prettier'
 
 let reloadCount = 0
 const ARROW = '\x1b[32m→\x1b[0m'
@@ -12,24 +13,32 @@ async function generateTheme() {
 
   fs.writeFile(
     'themes/poimandres-zed.json',
-    createSchema(base, 'poimandres-zed'),
+    createSchema(
+      {
+        theme: base,
+        themeName: 'poimandres-zed',
+      },
+      {
+        theme: storm,
+        themeName: 'poimandres-zed-storm',
+      },
+      {
+        theme: noitalics,
+        themeName: 'poimandres-zed-noitalics',
+      },
+      {
+        theme: stormNoitalics,
+        themeName: 'poimandres-zed-noitalics-storm',
+      }
+    ),
     (err) => err && console.log(err)
   )
-  fs.writeFile(
-    'themes/poimandres-theme-zed-storm.json',
-    createSchema(storm, 'poimandres-zed-storm'),
-    (err) => err && console.log(err)
+
+  const formatted = await prettier.format(
+    fs.readFileSync('themes/poimandres-zed.json', 'utf-8'),
+    { parser: 'json' }
   )
-  fs.writeFile(
-    'themes/poimandres-theme-zed-noitalics.json',
-    createSchema(noitalics, 'poimandres-zed-noitalics'),
-    (err) => err && console.log(err)
-  )
-  fs.writeFile(
-    'themes/poimandres-theme-zed-noitalics-storm.json',
-    createSchema(stormNoitalics, 'poimandres-zed-noitalics-storm'),
-    (err) => err && console.log(err)
-  )
+  fs.writeFileSync('themes/poimandres-zed.json', formatted)
 
   delete base.colors.black
   delete base.colors.transparent
