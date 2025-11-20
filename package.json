@@ -7,7 +7,7 @@
   "scripts": {
     "format": "prettier --write --ignore-unknown .",
     "watch": "node src/watch.js",
-    "watch:sync": "node src/watch.js --sync"
+    "watch:zed": "node src/watch.js --zed"
   },
   "repository": {
     "type": "git",

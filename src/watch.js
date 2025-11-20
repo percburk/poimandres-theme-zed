@@ -1,8 +1,8 @@
 import fs from 'node:fs'
-import sharp from 'sharp'
+import os from 'node:os'
 import chokidar from 'chokidar'
 import prettier from 'prettier'
-import os from 'node:os'
+import sharp from 'sharp'
 
 let reloadCount = 0
 const ARROW = '\x1b[32m→\x1b[0m'
@@ -41,8 +41,8 @@ async function generateTheme() {
     (err) => err && console.log(err)
   )
 
-  if (args.includes('--sync')) {
-    console.log(`${ARROW} syncing to Zed themes`)
+  if (args.includes('--zed')) {
+    console.log(`${ARROW} writing theme to Zed config`)
     fs.writeFileSync(
       `${os.homedir()}/.config/zed/themes/poimandres-zed.json`,
       formatted,
@@ -60,7 +60,7 @@ async function generateTheme() {
   console.log(`${ARROW} assets generated`)
 }
 
-const watcher = chokidar.watch('./src/theme.js')
+const watcher = chokidar.watch('src/theme.js')
 
 watcher
   .on('add', (path) => {
