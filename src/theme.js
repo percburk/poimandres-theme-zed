@@ -128,7 +128,7 @@ function createTheme({ colors, styles }, themeName) {
         "scrollbar.thumb.border": "${colors.black}80",
         "scrollbar.track.background": "${colors.bg}",
         "scrollbar.track.border": "${colors.black}00",
-        "editor.foreground": "${colors.gray}",
+        "editor.foreground": "${colors.offWhite}",
         "editor.background": "${colors.bg}",
         "editor.gutter.background": "${colors.bg}",
         "editor.subheader.background": null,
