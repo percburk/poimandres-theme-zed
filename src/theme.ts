@@ -1,3 +1,9 @@
+export type Theme = typeof base
+export interface ThemeArg {
+  theme: Theme
+  themeName: string
+}
+
 export const base = {
   colors: {
     brightYellow: '#fffac2',
@@ -51,12 +57,11 @@ export const storm = {
 
 export const stormNoitalics = {
   ...base,
-  colors: { ...storm.colors },
   styles: { ...base.styles, fontStyle: 'normal' },
 }
 
-export function createSvg({ colors }) {
-  const circle = (color, i) => `
+export function createSvg({ colors }: Theme) {
+  const circle = (color: string, i: number) => `
     <circle
       r="4"
       cy="${Math.ceil((i + 1) / 4) * 10}"
@@ -77,7 +82,7 @@ export function createSvg({ colors }) {
   `
 }
 
-function createTheme({ colors, styles }, themeName) {
+function createTheme({ colors, styles }: Theme, themeName: string) {
   return `
     {
       "name": "${themeName}",
@@ -401,7 +406,7 @@ function createTheme({ colors, styles }, themeName) {
   `
 }
 
-export function createSchema(...themeArgs) {
+export function createSchema(...themeArgs: ThemeArg[]) {
   const themes = themeArgs
     .map(({ theme, themeName }) => createTheme(theme, themeName))
     .join(',')

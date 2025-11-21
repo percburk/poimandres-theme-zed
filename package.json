@@ -6,8 +6,8 @@
   "main": "src/watch.js",
   "scripts": {
     "format": "prettier --write --ignore-unknown .",
-    "watch": "node src/watch.js",
-    "watch:zed": "node src/watch.js --zed"
+    "watch": "node --experimental-transform-types src/watch.ts",
+    "watch:zed": "node --experimental-transform-types src/watch.ts -- --zed"
   },
   "repository": {
     "type": "git",

@@ -11,7 +11,7 @@ const args = process.argv.slice(2)
 
 async function generateTheme() {
   const { base, noitalics, storm, stormNoitalics, createSchema, createSvg } =
-    await import(`./theme.js?v=${reloadCount}`)
+    await import(`./theme.ts?v=${reloadCount}`)
   reloadCount++
 
   const schema = createSchema(
@@ -35,18 +35,13 @@ async function generateTheme() {
 
   const formatted = await prettier.format(schema, { parser: 'json' })
 
-  fs.writeFileSync(
-    'themes/poimandres-zed.json',
-    formatted,
-    (err) => err && console.log(err)
-  )
+  fs.writeFileSync('themes/poimandres-zed.json', formatted)
 
   if (args.includes('--zed')) {
     console.log(`${ARROW} writing theme to Zed config`)
     fs.writeFileSync(
       `${os.homedir()}/.config/zed/themes/poimandres-zed.json`,
-      formatted,
-      (err) => err && console.log(err)
+      formatted
     )
   }
 
@@ -60,7 +55,7 @@ async function generateTheme() {
   console.log(`${ARROW} assets generated`)
 }
 
-const watcher = chokidar.watch('src/theme.js')
+const watcher = chokidar.watch('src/theme.ts')
 
 watcher
   .on('add', (path) => {
