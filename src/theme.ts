@@ -240,7 +240,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
           font_weight: null,
         },
         constant: {
-          color: colors.brightMint,
+          color: colors.offWhite,
           font_style: null,
           font_weight: null,
         },
@@ -412,6 +412,6 @@ export function createSchema(...themeArgs: ThemeArg[]) {
     $schema: 'https://zed.dev/schema/themes/v0.1.0.json',
     name: 'poimandres-zed',
     author: 'percburk',
-    themes: themes,
+    themes,
   }
 }
