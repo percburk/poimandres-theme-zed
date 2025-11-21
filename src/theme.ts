@@ -57,6 +57,7 @@ export const storm = {
 
 export const stormNoitalics = {
   ...base,
+  colors: { ...base.colors, ...storm.colors },
   styles: { ...base.styles, fontStyle: 'normal' },
 }
 
