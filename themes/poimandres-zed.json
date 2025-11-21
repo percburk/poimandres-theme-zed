@@ -4,7 +4,7 @@
   "author": "percburk",
   "themes": [
     {
-      "name": "poimandres-zed",
+      "name": "poimandres zed",
       "appearance": "dark",
       "style": {
         "border": "#ffffff10",
@@ -323,7 +323,7 @@
       }
     },
     {
-      "name": "poimandres-zed-storm",
+      "name": "poimandres zed storm",
       "appearance": "dark",
       "style": {
         "border": "#ffffff10",
@@ -642,7 +642,7 @@
       }
     },
     {
-      "name": "poimandres-zed-noitalics",
+      "name": "poimandres zed noitalics",
       "appearance": "dark",
       "style": {
         "border": "#ffffff10",
@@ -961,7 +961,7 @@
       }
     },
     {
-      "name": "poimandres-zed-noitalics-storm",
+      "name": "poimandres zed noitalics storm",
       "appearance": "dark",
       "style": {
         "border": "#ffffff10",

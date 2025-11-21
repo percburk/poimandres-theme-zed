@@ -1,7 +1,6 @@
 import fs from 'node:fs'
 import os from 'node:os'
 import chokidar from 'chokidar'
-import prettier from 'prettier'
 import sharp from 'sharp'
 
 let reloadCount = 0
@@ -17,32 +16,28 @@ async function generateTheme() {
   const schema = createSchema(
     {
       theme: base,
-      themeName: 'poimandres-zed',
+      themeName: 'poimandres zed',
     },
     {
       theme: storm,
-      themeName: 'poimandres-zed-storm',
+      themeName: 'poimandres zed storm',
     },
     {
       theme: noitalics,
-      themeName: 'poimandres-zed-noitalics',
+      themeName: 'poimandres zed noitalics',
     },
     {
       theme: stormNoitalics,
-      themeName: 'poimandres-zed-noitalics-storm',
+      themeName: 'poimandres zed noitalics storm',
     }
   )
 
-  const formatted = await prettier.format(schema, { parser: 'json' })
-
-  fs.writeFileSync('themes/poimandres-zed.json', formatted)
+  const json = JSON.stringify(schema, null, 2)
+  fs.writeFileSync('themes/poimandres-zed.json', json)
 
   if (args.includes('--zed')) {
     console.log(`${ARROW} writing theme to Zed config`)
-    fs.writeFileSync(
-      `${os.homedir()}/.config/zed/themes/poimandres-zed.json`,
-      formatted
-    )
+    fs.writeFileSync(`${os.homedir()}/.config/zed/themes/poimandres-zed.json`, json)
   }
 
   delete base.colors.black
