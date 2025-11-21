@@ -1,1 +1,9 @@
-node_modules/
+# production
+/build
+/dist
+
+# dependencies
+package-lock.json
+
+# testing
+/coverage
