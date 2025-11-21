@@ -5,6 +5,7 @@ import sharp from 'sharp'
 
 let reloadCount = 0
 const ARROW = '\x1b[32m→\x1b[0m'
+const ZED_THEMES_DIR = `${os.homedir()}/.config/zed/themes`
 
 const args = process.argv.slice(2)
 
@@ -36,8 +37,13 @@ async function generateTheme() {
   fs.writeFileSync('themes/poimandres-zed.json', json)
 
   if (args.includes('--zed')) {
-    console.log(`${ARROW} writing theme to Zed config`)
-    fs.writeFileSync(`${os.homedir()}/.config/zed/themes/poimandres-zed.json`, json)
+    if (!fs.existsSync(ZED_THEMES_DIR)) {
+      console.log(`${ARROW} creating Zed themes directory`)
+      fs.mkdirSync(ZED_THEMES_DIR, { recursive: true })
+    }
+
+    console.log(`${ARROW} writing to Zed themes`)
+    fs.writeFileSync(`${ZED_THEMES_DIR}/poimandres-zed.json`, json)
   }
 
   delete base.colors.black
