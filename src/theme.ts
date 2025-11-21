@@ -231,12 +231,12 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
             "font_weight": null
           },
           "comment": {
-            "color": "${colors.darkerGray}B0",
+            "color": "#5b5f77",
             "font_style": "${styles.fontStyle}",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "${colors.darkerGray}",
+            "color": "#5b5f77",
             "font_style": "${styles.fontStyle}",
             "font_weight": null
           },
@@ -371,17 +371,17 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
             "font_weight": null
           },
           "function": {
-            "color": "${colors.offWhite}d0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "${colors.offWhite}d0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.special.definition": {
-            "color": "${colors.offWhite}d0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },

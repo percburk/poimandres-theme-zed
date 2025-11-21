@@ -149,12 +149,12 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#767c9dB0",
+            "color": "#5b5f77",
             "font_style": "italic",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "#767c9d",
+            "color": "#5b5f77",
             "font_style": "italic",
             "font_weight": null
           },
@@ -289,17 +289,17 @@
             "font_weight": null
           },
           "function": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.special.definition": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
@@ -468,12 +468,12 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#868cadB0",
+            "color": "#5b5f77",
             "font_style": "italic",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "#868cad",
+            "color": "#5b5f77",
             "font_style": "italic",
             "font_weight": null
           },
@@ -608,17 +608,17 @@
             "font_weight": null
           },
           "function": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.special.definition": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
@@ -787,12 +787,12 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#767c9dB0",
+            "color": "#5b5f77",
             "font_style": "normal",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "#767c9d",
+            "color": "#5b5f77",
             "font_style": "normal",
             "font_weight": null
           },
@@ -927,17 +927,17 @@
             "font_weight": null
           },
           "function": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.special.definition": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
@@ -1106,12 +1106,12 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#868cadB0",
+            "color": "#5b5f77",
             "font_style": "normal",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "#868cad",
+            "color": "#5b5f77",
             "font_style": "normal",
             "font_weight": null
           },
@@ -1246,17 +1246,17 @@
             "font_weight": null
           },
           "function": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
           "function.special.definition": {
-            "color": "#e4f0fbd0",
+            "color": "#c2cad4",
             "font_style": null,
             "font_weight": null
           },
