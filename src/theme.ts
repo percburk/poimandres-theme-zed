@@ -240,7 +240,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
           font_weight: null,
         },
         constant: {
-          color: colors.offWhite,
+          color: colors.lightBlue,
           font_style: null,
           font_weight: null,
         },
