@@ -1,12 +1,20 @@
 # poimandres-theme-zed
 
-<img src="assets/dots.png" alt="Palette preview" width="320" />
+<img src="assets/poimandres-dots.png" alt="poimandres palette preview" width="320" />
 
 ![Node version](https://img.shields.io/badge/node-24.11.1-43853d?logo=node.js&logoColor=white)
 
 ## Overview
 
 A faithful and meticulous port of the awesome poimandres VS Code theme for Zed. Some ports exist, but since Zed's syntax highlighting customization is not to the level of VS Code's just yet, some colors in those ports that poimandres uses sparingly are overrepresented in the actual buffer. This project makes the best compromises on syntax colors to offer as consistent colors with VS Code as possible. When decisions needed to be made, the lighter of the two color options was usually chosen for readability.
+
+**Update:** Now there's this one too:
+
+## honeycrisp-IIe
+
+<img src="assets/honeycrisp-IIe-dots.png" alt="honeycrisp IIe palette preview" width="320" />
+
+A mix of inspiration of autumnal colors alongside nostalgic hues of the certain old beige computer we had in the basement. Cues from poimandres' minimalism are still considered, and readability is a main concern.
 
 ## Installation
 

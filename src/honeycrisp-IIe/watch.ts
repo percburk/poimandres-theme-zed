@@ -10,31 +10,23 @@ const ZED_THEMES_DIR = `${os.homedir()}/.config/zed/themes`
 const args = process.argv.slice(2)
 
 async function generateTheme() {
-  const { base, noitalics, storm, stormNoitalics, createSchema, createSvg } =
+  const { base, noitalics, createSchema, createSvg } =
     await import(`./theme.ts?v=${reloadCount}`)
   reloadCount++
 
   const schema = createSchema(
     {
       theme: base,
-      themeName: 'poimandres zed',
-    },
-    {
-      theme: storm,
-      themeName: 'poimandres zed storm',
+      themeName:  'honeycrisp IIe',
     },
     {
       theme: noitalics,
-      themeName: 'poimandres zed noitalics',
+      themeName: 'honeycrisp IIe noitalics',
     },
-    {
-      theme: stormNoitalics,
-      themeName: 'poimandres zed noitalics storm',
-    }
   )
 
   const json = JSON.stringify(schema, null, 2)
-  fs.writeFileSync('themes/poimandres-zed.json', json)
+  fs.writeFileSync('themes/honeycrisp-IIe.json', json)
 
   if (args.includes('--zed')) {
     if (!fs.existsSync(ZED_THEMES_DIR)) {
@@ -43,20 +35,20 @@ async function generateTheme() {
     }
 
     console.log(`${ARROW} writing to Zed themes`)
-    fs.writeFileSync(`${ZED_THEMES_DIR}/poimandres-zed.json`, json)
+    fs.writeFileSync(`${ZED_THEMES_DIR}/honeycrisp-IIe.json`, json)
   }
 
   delete base.colors.black
   delete base.colors.transparent
   sharp(Buffer.from(createSvg(base).trim()), { density: 400 })
     .png()
-    .toFile('assets/dots.png')
+    .toFile('assets/honeycrisp-IIe-dots.png')
     .catch((err) => console.log(err))
 
   console.log(`${ARROW} assets generated`)
 }
 
-const watcher = chokidar.watch('src/theme.ts')
+const watcher = chokidar.watch('src/honeycrisp-IIe/theme.ts')
 
 watcher
   .on('add', (path) => {
