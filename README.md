@@ -10,10 +10,10 @@ A faithful and detailed port of the awesome poimandres VS Code theme for Zed.
 
 **Variants:**
 
-- poimandres-zed
-- poimandres-zed noitalics
-- poimandres-zed storm
-- poimandres-zed storm noitalics
+- poimandres zed
+- poimandres zed noitalics
+- poimandres zed storm
+- poimandres zed storm noitalics
 
 ## honeycrisp-IIe
 
@@ -23,10 +23,10 @@ A original theme inspired by autumn leaves and the good old beige computer in th
 
 **Variants:**
 
-- honeycrisp-IIe
-- honeycrisp-IIe noitalics
-- honeycrisp-IIe tang (a little more vivid, imagine you drank some Tang)
-- honeycrisp-IIe tang noitalics
+- honeycrisp IIe
+- honeycrisp IIe noitalics
+- honeycrisp IIe tang (a little more vivid, imagine you drank some Tang)
+- honeycrisp IIe tang noitalics
 
 ## Installation
 
@@ -46,7 +46,3 @@ This project requires Node 24.11.1 or later (Using Node's new TypeScript support
 ## Using the Theme in Zed
 
 Once `pnpm run watch:zed` has copied the files, (or by manually copying files in `themes` into `~/.config/zed/themes`) open Zed, use command pallete to select `theme selector: toggle` , and pick the variant you want.
-
-## Contributing
-
-Issues and pull requests are welcome. Please use the provided formatter before committing and describe any visual decisions made so the meticulous baseline can be maintained.
