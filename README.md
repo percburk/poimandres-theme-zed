@@ -1,12 +1,32 @@
-# poimandres-theme-zed
-
-<img src="assets/dots.png" alt="Palette preview" width="320" />
+# zed-themes
 
 ![Node version](https://img.shields.io/badge/node-24.11.1-43853d?logo=node.js&logoColor=white)
 
-## Overview
+## poimandres-zed
 
-A faithful and meticulous port of the awesome poimandres VS Code theme for Zed. Some ports exist, but since Zed's syntax highlighting customization is not to the level of VS Code's just yet, some colors in those ports that poimandres uses sparingly are overrepresented in the actual buffer. This project makes the best compromises on syntax colors to offer as consistent colors with VS Code as possible. When decisions needed to be made, the lighter of the two color options was usually chosen for readability.
+<img src="assets/poimandres-dots.png" alt="poimandres palette preview" width="320" />
+
+A faithful and detailed port of the awesome poimandres VS Code theme for Zed.
+
+**Variants:**
+
+- poimandres-zed
+- poimandres-zed noitalics
+- poimandres-zed storm
+- poimandres-zed storm noitalics
+
+## honeycrisp-IIe
+
+<img src="assets/honeycrisp-IIe-dots.png" alt="honeycrisp IIe palette preview" width="320" />
+
+A original theme inspired by autumn leaves and the good old beige computer in the basement.
+
+**Variants:**
+
+- honeycrisp-IIe
+- honeycrisp-IIe noitalics
+- honeycrisp-IIe tang (a little more vivid, imagine you drank some Tang)
+- honeycrisp-IIe tang noitalics
 
 ## Installation
 
@@ -18,17 +38,14 @@ This project requires Node 24.11.1 or later (Using Node's new TypeScript support
 ## Commands
 
 - `pnpm run format`: Formats the source files using Prettier.
-- `pnpm run watch`: Watches `theme.ts` and regenerates assets on change.
-- `pnpm run watch:zed`: Watches `theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. If you have the theme selected in Zed, you will see theme changes in Zed in real time.
+- `pnpm run poimandres:watch`: Watches `poimandres-zed/theme.ts` and regenerates assets on change.
+- `pnpm run poimandres:watch:zed`: Watches `poimandres-zed/theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. If you have the theme selected in Zed, you will see theme changes in Zed in real time.
+- `pnpm run IIe:watch`: Watches `honeycrisp-IIe/theme.ts` and regenerates assets on change.
+- `pnpm run IIe:watch:zed`: Watches `honeycrisp-IIe/theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. Select the theme for real time updates.
 
 ## Using the Theme in Zed
 
-Once `pnpm run watch:zed` has copied the files, (or by manually copying `poimandres-zed.json` into `~/.config/zed/themes`) open Zed, use command pallete to select `theme selector: toggle` , and pick the variant you want:
-
-- `poimandres zed`
-- `poimandres zed storm`
-- `poimandres zed noitalics`
-- `poimandres zed noitalics storm`
+Once `pnpm run watch:zed` has copied the files, (or by manually copying files in `themes` into `~/.config/zed/themes`) open Zed, use command pallete to select `theme selector: toggle` , and pick the variant you want.
 
 ## Contributing
 
