@@ -56,7 +56,7 @@ async function generateTheme() {
   console.log(`${ARROW} assets generated`)
 }
 
-const watcher = chokidar.watch('src/poimandres-theme-zed/theme.ts')
+const watcher = chokidar.watch('src/poimandres-zed/theme.ts')
 
 watcher
   .on('add', (path) => {

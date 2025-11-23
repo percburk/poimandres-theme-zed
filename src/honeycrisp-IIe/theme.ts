@@ -49,11 +49,6 @@ export const tang = {
   ...base,
   colors: {
     ...base.colors,
-    activeLine: '#2b261c',
-    background: '#1c1815',
-    elementBackground: '#2b261c',
-    active: '#342e28',
-    border: '#443e38',
     function: '#6dd16d',
     tag: '#6dd16d',
     keyword: '#ff9547',
@@ -86,7 +81,7 @@ export function createSvg({ colors }: Theme) {
       viewBox="0 0 50 ${Math.ceil(Object.keys(colors).length / 4) * 12}"
       xmlns="http://www.w3.org/2000/svg"
     >
-      ${Object.values(colors).map(circle).join('')}
+      ${[...new Set(Object.values(colors))].map(circle).join('')}
     </svg>
   `
 }
@@ -182,7 +177,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'terminal.ansi.white': colors.white,
       'terminal.ansi.bright_white': colors.white,
       'terminal.ansi.dim_white': colors.text,
-      'link_text.hover': colors.info,
+      'link_text.hover': colors.keyword,
       conflict: colors.danger,
       'conflict.background': colors.background,
       'conflict.border': colors.danger,
@@ -288,12 +283,12 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
           font_weight: null,
         },
         link_text: {
-          color: colors.info,
+          color: colors.keyword,
           font_style: null,
           font_weight: null,
         },
         link_uri: {
-          color: colors.info,
+          color: colors.keyword,
           font_style: null,
           font_weight: null,
         },

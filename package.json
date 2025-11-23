@@ -1,9 +1,8 @@
 {
-  "name": "poimandres-theme-zed",
+  "name": "zed-themes",
   "version": "0.1.0",
-  "description": "Faithful ports of the poimandres VS Code themes for Zed, and now another one too.",
+  "description": "A collection of themes for the Zed editor, minimal and tasteful.",
   "type": "module",
-  "main": "src/watch.js",
   "scripts": {
     "format": "prettier --write --ignore-unknown .",
     "poimandres:watch": "node --experimental-transform-types --no-warnings src/poimandres-theme-zed/watch.ts",
