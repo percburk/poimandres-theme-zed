@@ -10,19 +10,27 @@ const ZED_THEMES_DIR = `${os.homedir()}/.config/zed/themes`
 const args = process.argv.slice(2)
 
 async function generateTheme() {
-  const { base, noitalics, createSchema, createSvg } =
+  const { base, noitalics, tang, tangNoitalics, createSchema, createSvg } =
     await import(`./theme.ts?v=${reloadCount}`)
   reloadCount++
 
   const schema = createSchema(
     {
       theme: base,
-      themeName:  'honeycrisp IIe',
+      themeName: 'honeycrisp IIe',
     },
     {
       theme: noitalics,
       themeName: 'honeycrisp IIe noitalics',
     },
+    {
+      theme: tang,
+      themeName: 'honeycrisp IIe tang',
+    },
+    {
+      theme: tangNoitalics,
+      themeName: 'honeycrisp IIe tang noitalics',
+    }
   )
 
   const json = JSON.stringify(schema, null, 2)

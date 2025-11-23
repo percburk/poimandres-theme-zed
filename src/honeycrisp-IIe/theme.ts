@@ -7,9 +7,11 @@ export interface ThemeArg {
 export const base = {
   colors: {
     attribute: '#b6a491',
-    activeLine: '#252118',
-    background: '#181512',
-    border: '#3b3631',
+    activeLine: '#2a251b',
+    background: '#1b1816',
+    elementBackground: '#2a251b',
+    active: '#322c27',
+    border: '#413b36',
     variable: '#e8d4bc',
     function: '#8fbc8f',
     tag: '#8fbc8f',
@@ -28,7 +30,6 @@ export const base = {
     text: '#d9c9b8',
     disabled: '#554d45',
     muted: '#8a7f73',
-    active: '#2d2823',
     dark: '#1a1714',
     white: '#f0e6d8',
     black: '#0d0b09',
@@ -41,6 +42,30 @@ export const base = {
 
 export const noitalics = {
   ...base,
+  styles: { ...base.styles, fontStyle: 'normal' },
+}
+
+export const tang = {
+  ...base,
+  colors: {
+    ...base.colors,
+    activeLine: '#2b261c',
+    background: '#1c1815',
+    elementBackground: '#2b261c',
+    active: '#342e28',
+    border: '#443e38',
+    function: '#6dd16d',
+    tag: '#6dd16d',
+    keyword: '#ff9547',
+    number: '#f070f0',
+    boolean: '#f070f0',
+    constant: '#4dd4e0',
+  },
+}
+
+export const tangNoitalics = {
+  ...base,
+  colors: { ...tang.colors },
   styles: { ...base.styles, fontStyle: 'normal' },
 }
 
@@ -80,7 +105,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'elevated_surface.background': colors.background,
       'surface.background': colors.background,
       background: colors.background,
-      'element.background': '#252118',
+      'element.background': colors.elementBackground,
       'element.hover': colors.active,
       'element.active': colors.active,
       'element.selected': colors.active,
@@ -111,8 +136,8 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'panel.background': colors.background,
       'panel.focused_border': colors.border,
       'pane.focused_border': colors.border,
-      'scrollbar.thumb.background': colors.muted,
-      'scrollbar.thumb.hover_background': colors.text,
+      'scrollbar.thumb.background': colors.active,
+      'scrollbar.thumb.hover_background': colors.muted,
       'scrollbar.thumb.border': colors.transparent,
       'scrollbar.track.background': colors.background,
       'scrollbar.track.border': colors.transparent,
