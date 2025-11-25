@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write --ignore-unknown .",
-    "poimandres:watch": "node --experimental-transform-types --no-warnings src/poimandres-theme-zed/watch.ts",
-    "poimandres:watch:zed": "node --experimental-transform-types --no-warnings src/poimandres-theme-zed/watch.ts -- --zed",
+    "poimandres:watch": "node --experimental-transform-types --no-warnings src/poimandres-zed/watch.ts",
+    "poimandres:watch:zed": "node --experimental-transform-types --no-warnings src/poimandres-zed/watch.ts -- --zed",
     "IIe:watch": "node --experimental-transform-types --no-warnings src/honeycrisp-IIe/watch.ts",
     "IIe:watch:zed": "node --experimental-transform-types --no-warnings src/honeycrisp-IIe/watch.ts -- --zed"
   },
