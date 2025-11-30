@@ -105,7 +105,7 @@ function createTheme({ colors, styles }: Theme, themeName: string) {
       'surface.background': colors.background,
       background: colors.background,
       'element.background': colors.backgroundElement,
-      'element.hover': colors.backgroundActiveLine,
+      'element.hover': colors.backgroundSelected,
       'element.active': colors.backgroundSelected,
       'element.selected': colors.backgroundSelected,
       'element.disabled': colors.textExtraDark,
