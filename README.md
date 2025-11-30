@@ -37,11 +37,11 @@ This project requires Node 24.11.1 or later (Using Node's new TypeScript support
 
 ## Commands
 
-- `pnpm run format`: Formats the source files using Prettier.
-- `pnpm run poimandres:watch`: Watches `poimandres-zed/theme.ts` and regenerates assets on change.
-- `pnpm run poimandres:watch:zed`: Watches `poimandres-zed/theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. If you have the theme selected in Zed, you will see theme changes in Zed in real time.
-- `pnpm run IIe:watch`: Watches `honeycrisp-IIe/theme.ts` and regenerates assets on change.
-- `pnpm run IIe:watch:zed`: Watches `honeycrisp-IIe/theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. Select the theme for real time updates.
+- `pnpm run format` - Formats the source files using Prettier.
+- `pnpm run poimandres:watch` - Watches `poimandres-zed/theme.ts` and regenerates assets on change.
+- `pnpm run poimandres:watch:zed` - Watches `poimandres-zed/theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. If you have the theme selected in Zed, you will see theme changes in Zed in real time.
+- `pnpm run IIe:watch` - Watches `honeycrisp-IIe/theme.ts` and regenerates assets on change.
+- `pnpm run IIe:watch:zed` - Watches `honeycrisp-IIe/theme.ts`, regenerates assets on change, and generates the theme in Zed's theme directory. Select the theme for real time updates.
 
 ## Using the Theme in Zed
 
